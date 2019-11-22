@@ -1,4 +1,4 @@
-require("./ApiConfiguration");
+require("./apiConfiguration");
 
 import { apiCallHelper } from "@/helpers/apiCallHelper";
 

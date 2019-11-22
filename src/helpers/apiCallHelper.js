@@ -1,4 +1,4 @@
-import todoApi from "@/api/ApiConfiguration";
+import todoApi from "@/api/apiConfiguration";
 
 export const apiCallHelper = {
   GET: (url, params) => {
