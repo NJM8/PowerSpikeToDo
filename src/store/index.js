@@ -18,8 +18,8 @@ export default new Vuex.Store({
     DELETE_TODO: vuexMutationHelpers.DELETE_FROM_ARRAY("todos")
   },
   actions: {
-    getTodos: vuexActionHelpers("getTodos", "SET_TODOS"),
-    createTodo: vuexActionHelpers("createTodo", "ADD_TODO"),
-    deleteTodo: vuexActionHelpers("deleteTodo", "DELETE_TODO")
+    getTodos: vuexActionHelpers.CRU("getTodos", "SET_TODOS"),
+    createTodo: vuexActionHelpers.CRU("createTodo", "ADD_TODO"),
+    deleteTodo: vuexActionHelpers.DELETE("deleteTodo", "DELETE_TODO")
   }
 });
