@@ -1,9 +1,11 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
+    <img alt="Vue logo" src="./assets/logo.png" class="bg-blue-400" />
     <HelloWorld msg="Welcome to Your Vue.js App" />
   </div>
 </template>
+
+<style src="./assets/styles.css"></style>s
 
 <script>
 import HelloWorld from "./components/HelloWorld.vue";
