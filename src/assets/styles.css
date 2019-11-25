@@ -1,3 +1,92 @@
 @tailwind base;
+
+body {
+  background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
+  @apply font-sans text-gray-800 tracking-wide
+}
+
+.app-max-width {
+  max-width: 1920px;
+}
+
+.card {
+  @apply bg-gray-200 rounded shadow-lg
+}
+
+.input {
+  @apply bg-gray-400 rounded appearance-none py-3 px-4 mt-1 w-full;
+}
+
+.label {
+  @apply uppercase font-bold text-sm text-gray-700 mt-4
+}
+
+@variants focus {
+  .input-focus {
+    box-shadow: 0 0 0 2px rgba(52,144,220,0.5);
+  }
+}
+
+.input:focus {
+  @apply input-focus;
+}
+
+.input-wrapper:focus-within {
+  @apply input-focus;
+}
+
+.btn {
+  @apply rounded py-2 px-8;
+}
+
+.btn-primary {
+  @apply bg-teal-500 text-white;
+}
+
+.btn-primary:hover {
+  @apply bg-teal-700;
+}
+
+.btn-primary:focus {
+  @apply bg-teal-700;
+}
+
+.btn-error {
+  @apply bg-red-500 text-white;
+}
+
+.btn-error:hover {
+  @apply bg-red-700;
+}
+
+.btn-error:focus {
+  @apply bg-red-700;
+}
+
+.list-transitions-enter-active,
+.list-transitions-leave-active {
+  transition: all 0.5s;
+}
+.list-transitions-enter,
+.list-transitions-leave-to {
+  opacity: 0;
+}
+.list-transitions-move {
+  transition: all 200ms ease;
+}
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  transition: all .2s ease-in;
+}
+
+.fade-leave-active {
+  transition: all .2s ease-out 500ms;
+  opacity: 0
+}
+
 @tailwind components;
 @tailwind utilities;
