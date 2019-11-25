@@ -1,12 +1,12 @@
 import todoApi from "@/api/apiConfiguration";
 
 export const apiCallHelper = {
-  GET: (url, params) => {
+  GET: url => {
     return new Promise((resolve, reject) => {
       todoApi
-        .get(url, params)
+        .get(url)
         .then(response => {
-          resolve(response);
+          resolve(response.data);
         })
         .catch(error => {
           reject(error);
