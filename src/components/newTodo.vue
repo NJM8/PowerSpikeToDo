@@ -41,7 +41,6 @@ export default {
     submitTodo() {
       this.createTodo({ title: this.title, content: this.content })
         .then(() => {
-          this.getTodos();
           this.clearNewTodo();
         })
         .catch(() => {
