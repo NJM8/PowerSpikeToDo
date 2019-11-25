@@ -7,8 +7,8 @@
         <p class="mt-2">Created:</p>
       </div>
       <div>
-        <p class="font-xl font-bold mt-2">{{ todo.title }}</p>
-        <p class="font-xl font-bold mt-2">{{ todo.content }}</p>
+        <p class="font-xl font-bold mt-2">{{ todo.title || "-" }}</p>
+        <p class="font-xl font-bold mt-2">{{ todo.content || "-" }}</p>
         <p class="font-xl font-bold mt-2">{{ getTodoCreatedDate }}</p>
       </div>
     </div>
