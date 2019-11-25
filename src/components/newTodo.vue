@@ -4,9 +4,21 @@
   >
     <p class="text-2xl w-full text-center font-bold mb-2">Add To Do</p>
     <label for="title" class="label">Title:</label>
-    <input type="text" name="title" class="input mb-4" v-model="title" />
+    <input
+      type="text"
+      name="title"
+      class="input mb-4"
+      v-model="title"
+      @keyup.enter="submitTodo"
+    />
     <label for="content" class="label">Content:</label>
-    <input type="text" name="content" class="input" v-model="content" />
+    <input
+      type="text"
+      name="content"
+      class="input"
+      v-model="content"
+      @keyup.enter="submitTodo"
+    />
     <div class="w-full flex justify-end mt-6">
       <button
         @click="submitTodo"
