@@ -50,6 +50,7 @@ export default {
   },
   computed: {
     ...mapGetters(["todos"]),
+    // dynamic computed to sort todos, uses sortBy select input selection.
     sortedTodos() {
       if (this.todos.length > 0) {
         return this.todos

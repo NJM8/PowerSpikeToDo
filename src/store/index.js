@@ -19,6 +19,7 @@ export default new Vuex.Store({
     DELETE_TODO: vuexMutationHelpers.DELETE_FROM_ARRAY("todos")
   },
   actions: {
+    // No promise wrapper for getTodos as it does not need to report back to its caller.
     getTodos: ({ commit }) => {
       todoApi
         .getTodos()
@@ -33,6 +34,7 @@ export default new Vuex.Store({
           });
         });
     },
+    // Wrapped createTodo in an action so it can report back to newTodo and the component can clear the inputs.
     createTodo: ({ dispatch }, params) => {
       return new Promise((resolve, reject) => {
         todoApi
