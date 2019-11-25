@@ -1,5 +1,7 @@
 <template>
-  <div class="card w-1/4 flex-col p-8 m-4 mt-8">
+  <div
+    class="card w-3/4 sm:w-2/3 md:w-1/2 lg:w-1/3 xl:w-1/4 flex-col p-8 m-4 mt-8 lg:mr-8"
+  >
     <p class="text-2xl w-full text-center font-bold mb-2">Add To Do</p>
     <label for="title" class="label">Title:</label>
     <input type="text" name="title" class="input mb-4" v-model="title" />
