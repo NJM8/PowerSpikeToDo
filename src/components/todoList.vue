@@ -11,14 +11,16 @@
           <p class="card text-3xl font-bold p-6 mb-4 text-center">
             To Do List:
           </p>
-          <div class="card flex p-6">
-            <label for="sortBy" class="label pr-2 text-xl">Order:</label>
-            <select name="sortBy" id="sortBy" v-model="sortBy" class="input">
-              <option value="title">Title</option>
-              <option value="content">Content</option>
-              <option value="created">Date</option>
-            </select>
-          </div>
+          <transition name="fade">
+            <div v-show="todos.length > 1" class="card flex p-6">
+              <label for="sortBy" class="label pr-2 text-xl">Order:</label>
+              <select name="sortBy" id="sortBy" v-model="sortBy" class="input">
+                <option value="title">Title</option>
+                <option value="content">Content</option>
+                <option value="created">Date</option>
+              </select>
+            </div>
+          </transition>
         </div>
         <transition-group
           name="list-transitions"
