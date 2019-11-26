@@ -1,19 +1,15 @@
 <template>
-  <div class="card p-6 m-4">
-    <div class="flex">
-      <div class="text-right pr-2">
-        <p class="mt-2">Title:</p>
-        <p class="mt-2">Content:</p>
-        <p class="mt-2">Created:</p>
-      </div>
-      <div>
-        <p class="font-xl font-bold mt-2">{{ todo.title || "-" }}</p>
-        <p class="font-xl font-bold mt-2">{{ todo.content || "-" }}</p>
-        <p class="font-xl font-bold mt-2">{{ getTodoCreatedDate }}</p>
-      </div>
+  <div class="card p-6 m-4 min-w-sm">
+    <div>
+      <p class="text-3xl font-bold border-b border-gray-500 text-center">
+        {{ todo.title || "-" }}
+      </p>
+      <p class="text-lg mt-4 mb-8">{{ todo.content || "-" }}</p>
+      <p class="text-xs mt-2 text-center">created on</p>
+      <p class="text-xs font-bold text-center">{{ getTodoCreatedDate }}</p>
     </div>
-    <div class="flex justify-end w-full mt-6">
-      <button class="btn btn-primary" @click="deleteTodo(todo)">
+    <div class="w-full text-center">
+      <button class="btn btn-primary mt-4" @click="deleteTodo(todo)">
         Complete
       </button>
     </div>
@@ -35,7 +31,7 @@ export default {
   computed: {
     getTodoCreatedDate() {
       const date = dayjs.unix(this.todo.created);
-      return date.format("MM/DD/YY hh:mm a");
+      return date.format("MM/DD/YY @ hh:mma");
     }
   },
   methods: {
