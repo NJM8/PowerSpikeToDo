@@ -9,6 +9,10 @@ body {
   max-width: 1920px;
 }
 
+.min-w-sm {
+  min-width: 200px;
+}
+
 .card {
   @apply bg-gray-200 rounded shadow-lg
 }
