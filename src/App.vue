@@ -3,7 +3,7 @@
     <div class="flex flex-col lg:flex-row items-center w-full items-start">
       <div class="flex flex-col items-center w-full md:w-1/2 lg:w-2/3">
         <div
-          class="card w-11/12 md:w-full lg:w-2/3 mt-16 py-6 px-10 text-center flex-shrink-0"
+          class="card w-11/12 md:w-full lg:w-2/3 mt-14 py-6 px-10 text-center flex-shrink-0"
         >
           <p class="text-5xl font-bold">
             PowerSpike <span class="whitespace-no-wrap">To Do</span>
