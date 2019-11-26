@@ -45,7 +45,7 @@ export default {
   },
   computed: {
     titleOrContentEntered() {
-      return this.title.length === 0 && this.content.length === 0;
+      return this.title.length === 0 || this.content.length === 0;
     }
   },
   methods: {
